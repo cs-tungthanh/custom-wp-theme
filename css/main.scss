@@ -99,3 +99,11 @@ $utilities: (
         border: none;
     }
 }
+
+/**************** FRONT PAGE ****************/
+/**************** SLIDER ****************/
+.carousel {
+    .carousel-control-prev, .carousel-control-next {
+        width: 9%;
+    }
+}

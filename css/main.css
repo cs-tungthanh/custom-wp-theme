@@ -11389,4 +11389,10 @@ fieldset:disabled .btn {
   color: #fff;
   border: none;
 }
+
+/**************** FRONT PAGE ****************/
+/**************** SLIDER ****************/
+.carousel .carousel-control-prev, .carousel .carousel-control-next {
+  width: 9%;
+}
 /*# sourceMappingURL=main.css.map */
