@@ -140,14 +140,15 @@ add_action( 'widgets_init', 'juliust96_widgets_init' );
  * Enqueue scripts and styles.
  */
 function juliust96_scripts() {
-	wp_enqueue_style( 'juliust96-style', get_stylesheet_uri(), array(), _S_VERSION );
 	// Note: add link to stylesheet
+	wp_enqueue_style( 'juliust96-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'juliust96-main', get_template_directory_uri() . '/css/main.css');
 	wp_enqueue_style( 'bootstrap-icons', get_template_directory_uri() . 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css');
-	
 	wp_style_add_data( 'juliust96-style', 'rtl', 'replace' );
-
-	wp_enqueue_script( 'juliust96-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	
+	wp_enqueue_script( 'bootstrap-popper', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js', array('jquery'));
+	wp_enqueue_script( 'bootstrap-script', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js', array('jquery'));
+	wp_enqueue_script( 'juliust96-script', get_template_directory_uri() . '/js/script.js', array('jquery'));
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
